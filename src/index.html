@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-      type="image/x-icon" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Homework 12</title>
-    </head>
-    
-    <body>
-      <main>
-        <section class="gallery">
-          <div class="container">
-            <div class="search-bar">
-              <form class="search-bar-form">
-                <label class="search-label">
-                  <input type="text" id="search-bar" placeholder="Search images..." />
-                  <div class="search-tooltip" data-text="Provide your keyword for searching, ex: dog, cat, etc.">
-                    <svg class="search-tooltip-icon" width="18" height="18"></svg>
-                  </div>
-                </label>
-                <button class="searchButton" type="submit">Search</button>
-              </form>
-              <div class="loader"></div>
-            </div>
-            <ul class="gallery-list"></ul>
-          </div>
-        </section>
-        <div class="div-button">
-          <button class="extentionButton" type="submit">Extend</button>
-        </div>
-      </main>
-    
-      <script type="module" src="./main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla App Template</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <form class="form js-search-form" name="search-form">
+    <input class="form-input" type="text" name="searchKey" placeholder="Search images..." />
+    <button class="search-btn" type="submit">Search</button>
+  </form>
+
+  <main>
+    <section class="gallery-section">
+      <!-- <span class="loader js-loader is-hidden"></span> -->
+      <ul class="gallery">
+
+      </ul>
+      <div class="container">
+
+        <button type="submit" class="more-image load-more js-load-more is-hidden">Load more</button>
+        <span class="loader js-loader is-hidden"></span>
+      </div>
+
+    </section>
+
+
+
+
+
+  </main>
+
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./js/pixabay-api.js"></script>
+  <script type="module" src="./js/render-functions.js"></script>
+</body>
+
 </html>
